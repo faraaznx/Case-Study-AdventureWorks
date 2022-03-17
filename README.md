@@ -29,12 +29,17 @@
 
 # Steps performed to achive the task
 <ul>
-<li>Data is present in MySQL database.</li><br>
-<li>Load the data from MySQL to HDFS using SQOOP.</li><br>
-<li>Create and load data to HIVE table.</li><br>
-<li>Read data from HIVE in Spark and perform data cleaning.</li><br>
-<li>Load the data again to hive and perform analytics.</li><br>
+<li>Create tables in MySQL database.</li><br>
+<li>Load data from MySQL into HDFS storage using Sqoop commands.</li><br>
+<li>Move data from HDFS to Hive.</li><br>
+<li>Integrate Hive into Spark and perform data cleaning.</li><br>
+<li>Using Pyspark, extract Customer demographics information from data and store it as parquet files.</li><br>
+<li>Move parquet files from Spark to Hive.</li><br>
+<li>Create tables in Hive and load data from Parquet files into tables.</li><br>
+ <li> Perform Hive analytics on Sales and Customer demographics dat</li><br>
 </ul>
+
+
 
 <h3>Project Architecture</h3>
 
