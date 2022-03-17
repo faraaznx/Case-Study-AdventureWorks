@@ -8,4 +8,4 @@
 
 # Total Purchase based on Education and Yearly Income
 
-![image (6)](https://user-images.githubusercontent.com/100192162/158645489-035f2b9d-67ee-4fbf-97b3-c9e2901157e7.png
+![image (6)](https://user-images.githubusercontent.com/100192162/158645489-035f2b9d-67ee-4fbf-97b3-c9e2901157e7.png)
