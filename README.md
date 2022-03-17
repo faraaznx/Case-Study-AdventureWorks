@@ -17,8 +17,8 @@ This big data project will look at Hive's capabilities to run analytical queries
 
 <h3>Technologies used to work in project</h3>
 <ul>
-<h4>Mysql</h4>
-<h4>HDFS Ecosystem</h4>
+<h4><li>Mysql</li></h4>
+<h4><li>HDFS Ecosystem</li></h4>
   
 <ul>
  <li>Sqoop</li>
@@ -48,7 +48,7 @@ This big data project will look at Hive's capabilities to run analytical queries
 <li>Using Pyspark, extract Customer demographics information from data and store it as parquet files.</li><br>
 <li>Move parquet files from Spark to Hive.</li><br>
 <li>Create tables in Hive and load data from Parquet files into tables.</li><br>
- <li> Perform Hive analytics on Sales and Customer demographics dat</li><br>
+ <li> Perform Hive analytics on Sales and Customer demographics data.</li><br>
 </ul>
 
 
