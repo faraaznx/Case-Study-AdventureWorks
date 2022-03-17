@@ -1,11 +1,14 @@
 <h3>Sqoop import command</h3>
 
-sqoop import --connect jdbc:mysql://localhost:3306/adventureworks?useSSL=False --username root --password-file file:///home/saif/LFS/cohort_c9/envvar/sqoop.pwd --delete-target-dir --target-dir /user/saif/HFS/Input/adventureworks --query "select CustomerID,TerritoryID,AccountNumber,CustomerType,ModifiedDate,Demographics from customer_individual \
+sqoop import --connect jdbc:mysql://localhost:3306/adventureworks?useSSL=False --username root \
+--password-file file:///home/saif/LFS/cohort_c9/envvar/sqoop.pwd --delete-target-dir --target-dir /user/saif/HFS/Input/adventureworks \
+--query "select CustomerID,TerritoryID,AccountNumber,CustomerType,ModifiedDate,Demographics from customer_individual \
 where \$CONDITIONS" --split-by CustomerID
 
 
 <h3>Hive manage table & Load data in manage table</h3>
-create table cust_indi(CustomerID int,TerritoryID int,AccountNumber string,CustomerType string,ModifiedDate timestamp,Demographics string) row format delimited fields terminated by ',' tblproperties("skip.header.line.count"="1") ;
+create table cust_indi(CustomerID int,TerritoryID int,AccountNumber string,CustomerType string,ModifiedDate timestamp,Demographics string) \
+row format delimited fields terminated by ',' tblproperties("skip.header.line.count"="1") ;
 
 load data inpath "/user/saif/HFS/Input/adventureworks/" into table cust_indi;
 
