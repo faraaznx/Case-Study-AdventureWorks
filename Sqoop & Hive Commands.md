@@ -12,7 +12,7 @@ row format delimited fields terminated by ',' tblproperties("skip.header.line.co
 
 load data inpath "/user/saif/HFS/Input/adventureworks/" into table cust_indi;
 
-<h3>Loading the data in the new table from managed table</h3>
+<h3> Organizing the XML data into separate columns and loading the data in the new customer table</h3>
 create table ext_cust as select customerid,territoryid,accountnumber,customertype,modifieddate,xpath(demographics,'IndividualSurvey/TotalPurchaseYTD/text()'),xpath(demographics,'IndividualSurvey/DateFirstPurchase/text()'),xpath(demographics,'IndividualSurvey/BirthDate/text()'),xpath(demographics,'IndividualSurvey/MaritalStatus/text()'),xpath(demographics,'IndividualSurvey/YearlyIncome/text()'),xpath(demographics,'IndividualSurvey/Gender/text()'),xpath(demographics,'IndividualSurvey/TotalChildren/text()'),xpath(demographics,'IndividualSurvey/NumberChildrenAtHome/text()'),xpath(demographics,'IndividualSurvey/Education/text()'),xpath(demographics,'IndividualSurvey/Occupation/text()'),xpath(demographics,'IndividualSurvey/HomeOwnerFlag/text()'),xpath(demographics,'IndividualSurvey/NumberCarsOwned/text()'),xpath(demographics,'IndividualSurvey/CommuteDistance/text()') from cust_indi;
 
 
@@ -21,7 +21,7 @@ sqoop import --connect jdbc:mysql://localhost:3306/adventureworks?useSSL=False -
 where \$CONDITIONS" -m 1
 
 
-<h3>Creating managed table for credit card & Loading the data in the managed table</h3>
+<h3>Creating managed table for credit card & Loading the data </h3>
 create table credit_hive(CreditCardID  int,CardType string,CardNumber bigint,ExpMonth int,ExpYear int,ModifiedDate timestamp ) row format delimited fields terminated by ','  tblproperties("skip.header.line.count"="1");
  
 load data inpath "/user/saif/HFS/Input/adventureworks/" into table credit_hive;
