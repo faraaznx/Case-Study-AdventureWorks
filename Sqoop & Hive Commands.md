@@ -6,13 +6,13 @@ sqoop import --connect jdbc:mysql://localhost:3306/adventureworks?useSSL=False -
 where \$CONDITIONS" --split-by CustomerID
 
 
-<h3>Creating Hive managed table & Load data in manage table</h3>
+<h3>Creating Hive managed table for customer date & loading the data</h3>
 create table cust_indi(CustomerID int,TerritoryID int,AccountNumber string,CustomerType string,ModifiedDate timestamp,Demographics string) \
 row format delimited fields terminated by ',' tblproperties("skip.header.line.count"="1") ;
 
 load data inpath "/user/saif/HFS/Input/adventureworks/" into table cust_indi;
 
-<h3>Loading the data in new table from managed table</h3>
+<h3>Loading the data in the new table from managed table</h3>
 create table ext_cust as select customerid,territoryid,accountnumber,customertype,modifieddate,xpath(demographics,'IndividualSurvey/TotalPurchaseYTD/text()'),xpath(demographics,'IndividualSurvey/DateFirstPurchase/text()'),xpath(demographics,'IndividualSurvey/BirthDate/text()'),xpath(demographics,'IndividualSurvey/MaritalStatus/text()'),xpath(demographics,'IndividualSurvey/YearlyIncome/text()'),xpath(demographics,'IndividualSurvey/Gender/text()'),xpath(demographics,'IndividualSurvey/TotalChildren/text()'),xpath(demographics,'IndividualSurvey/NumberChildrenAtHome/text()'),xpath(demographics,'IndividualSurvey/Education/text()'),xpath(demographics,'IndividualSurvey/Occupation/text()'),xpath(demographics,'IndividualSurvey/HomeOwnerFlag/text()'),xpath(demographics,'IndividualSurvey/NumberCarsOwned/text()'),xpath(demographics,'IndividualSurvey/CommuteDistance/text()') from cust_indi;
 
 
@@ -26,6 +26,6 @@ create table credit_hive(CreditCardID  int,CardType string,CardNumber bigint,Exp
  
 load data inpath "/user/saif/HFS/Input/adventureworks/" into table credit_hive;
 
-<h3>Load data from hive to Pyspark & perform Transformation</h3>
+<h3>Loading the data from Hive to Pyspark For Transformation</h3>
 
-<h3>Load data from Pyspark to hive and perform analytics</h3>
+<h3>Loading the data from Pyspark to Hive and perform analytics</h3>
