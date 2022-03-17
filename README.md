@@ -1,5 +1,5 @@
 # Case-Study-AdventureWorks
-<p><b>Business Problem</b>: HDFC Ltd is one of India's leading housing finance companies. HDFC Ltd offers a wide range of loan products such as Home Loans for new and resale properties and also offers credit cards. Credit cards are a convenient way of making any purchases from shopping to purchasing your favourite gadget to buying that new AC for your home to booking your flights & hotel and more or settling exorbitant bills when you don't have immediate funds at your disposal. HDFC from past 1 year is facing a issue related volume and variety of data so Its decide to transform data from RDBMS (MySQL) to HADOOP (hive).</p>
+<p><b>Aim</b>:To perform Hive analytics on Sales and Customer Demographics data using big data tools such as Sqoop, Spark, and HDFS..</p>
 
 <h3>Technologies used to work in project</h3>
 <ul>
