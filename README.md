@@ -39,6 +39,10 @@ This big data project will look at Hive's capabilities to run analytical queries
 
 ![Untitled (12)](https://user-images.githubusercontent.com/100192276/158550587-0619c0ca-d35b-4db7-9e6c-e2d2789f6ab6.png)
 
+# Project Architecture
+
+![Untitled Diagram(1) (1)](https://user-images.githubusercontent.com/100192162/158647358-665077d2-c528-479c-83ec-4b345ae17109.jpg)
+
 # Steps performed to achive the task
 <ul>
 <li>Create tables in MySQL database.</li><br>
@@ -50,9 +54,3 @@ This big data project will look at Hive's capabilities to run analytical queries
 <li>Create tables in Hive and load data from Parquet files into tables.</li><br>
  <li> Perform Hive analytics on Sales and Customer demographics data.</li><br>
 </ul>
-
-
-
-<h3>Project Architecture</h3>
-
-![Untitled Diagram(1) (1)](https://user-images.githubusercontent.com/100192162/158647358-665077d2-c528-479c-83ec-4b345ae17109.jpg)
