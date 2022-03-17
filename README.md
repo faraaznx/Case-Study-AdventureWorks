@@ -1,5 +1,7 @@
 # Case-Study-AdventureWorks
-<p><b>Aim</b>:To perform Hive analytics on Sales and Customer Demographics data using big data tools such as Sqoop, Spark, and HDFS..</p>
+<h3><b>Aim</b></h3>
+  
+ To perform Hive analytics on Sales and Customer Demographics data using big data tools such as Sqoop, Spark, and HDFS..</p>
 
 <h3>Technologies used to work in project</h3>
 <ul>
