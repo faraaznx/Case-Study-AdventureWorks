@@ -1,6 +1,7 @@
 <h3> Importing Customer & Individual Data From Mysql To HDFS Using Sqoop</h3>
 
-sqoop import --connect jdbc:mysql://localhost:3306/adventureworks?useSSL=False --username root \
+sqoop import --connect jdbc:mysql://localhost:3306/adventureworks?useSSL=False 
+--username root \
 --password-file file:///home/saif/LFS/cohort_c9/envvar/sqoop.pwd --delete-target-dir --target-dir /user/saif/HFS/Input/adventureworks \
 --query "select CustomerID,TerritoryID,AccountNumber,CustomerType,ModifiedDate,Demographics from customer_individual \
 where \$CONDITIONS" --split-by CustomerID
